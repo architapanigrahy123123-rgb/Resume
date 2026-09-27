@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Inter", Arial, sans-serif;
+}
+
+body {
+    background: #080b20;
+    color: white;
+}
+
+
+#mynav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 35px;
+
+    background: rgba(8, 11, 32, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 5px 25px rgba(108, 99, 255, 0.2);
+
+    z-index: 1000;
+}
+
+/* Logo */
+
+#title {
+    margin-right: auto;
+
+    font-size: 26px;
+
+    background: linear-gradient(
+        90deg,
+        #c084fc,
+        #6366f1
+    );
+
+  -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Navigation */
+
+.nav-items {
+    display: flex;
+
+    list-style: none;
+
+    gap: 8px;
+}
+
+.nav-item {
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.nav-item a {
+    display: block;
+
+    padding: 10px 14px;
+
+    color: #e5e7eb;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background: rgba(139, 92, 246, 0.2);
+
+    transform: translateY(-2px);
+}
+
+.nav-item:hover a {
+    color: #c4b5fd;
+}
+
+/* Active menu */
+
+.nav-item.active {
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #6366f1
+    );
+
+    box-shadow:
+        0 5px 15px rgba(99, 102, 241, 0.35);
+}
+
+.nav-item.active a {
+    color: white;
+}
+
+/* ================= MAIN ================= */
+
+.mybody {
+    min-height: 100vh;
+
+    padding: 110px 20px 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(168, 85, 247, 0.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(59, 130, 246, 0.15),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #080b20,
+            #111633,
+            #17183e
+        );
+}
+
+
+.about-container {
+    width: 100%;
+    max-width: 1000px;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(99, 102, 241, 0.15);
+
+    backdrop-filter: blur(15px);
+
+    transition: 0.4s;
+}
+
+.about-container:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(168, 85, 247, 0.25);
+}
+
+
+.heading {
+    display: inline-block;
+
+    padding: 11px 25px;
+
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #6366f1
+    );
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+/* ================= CONTENT ================= */
+
+.about-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 45px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+
+    font-size: 28px;
+
+    color: #ddd6fe;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.intro {
+    font-size: 17px !important;
+
+    color: #e2e8f0 !important;
+}
+
+.section-title {
+    margin-top: 25px;
+}
+
+
+.about-photo {
+    width: 190px;
+    height: 190px;
+
+    flex-shrink: 0;
+
+    padding: 5px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #06b6d4,
+        #6366f1
+    );
+
+    box-shadow:
+        0 0 30px rgba(139, 92, 246, 0.5);
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid #111633;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mytable {
+    width: 100%;
+
+    margin-top: 20px;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+.mytable tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.3s;
+}
+
+.mytable tr:hover {
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.mytable td {
+    padding: 15px;
+
+    color: #dbeafe;
+
+    line-height: 1.5;
+}
+
+.mytable td:first-child {
+    width: 30%;
+
+    color: #c4b5fd;
+}
+
+.mytable a {
+    color: #93c5fd;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.mytable a:hover {
+    color: #c084fc;
+
+    text-decoration: underline;
+}
+
+
+@media (max-width: 850px) {
+
+    #mynav {
+        padding: 10px 15px;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        position: relative;
+    }
+
+    #title {
+        margin: 0;
+    }
+
+    .nav-items {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .nav-item a {
+        padding: 8px 10px;
+
+        font-size: 13px;
+    }
+
+    .mybody {
+        padding-top: 40px;
+    }
+
+    .about-container {
+        padding: 30px 20px;
+    }
+
+    .about-content {
+        flex-direction: column-reverse;
+
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .mytable {
+        text-align: left;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .nav-items {
+        gap: 3px;
+    }
+
+    .nav-item a {
+        padding: 7px 6px;
+
+        font-size: 12px;
+    }
+
+    .about-container {
+        padding: 25px 15px;
+    }
+
+    .heading {
+        font-size: 18px;
+    }
+
+    .about-text h2 {
+        font-size: 22px;
+    }
+
+    .mytable td {
+        padding: 10px 6px;
+
+        font-size: 14px;
+    }
+}

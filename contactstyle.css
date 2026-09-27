@@ -1,0 +1,31 @@
+@import url("style.css");
+
+.about-container {
+    max-width: 850px;
+}
+
+.about-text {
+    width: 100%;
+}
+
+.mytable {
+    margin-top: 25px;
+}
+
+.mytable td:first-child {
+    width: 25%;
+}
+
+.mytable a {
+    color: #93c5fd;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.mytable a:hover {
+    color: #c084fc;
+
+    text-decoration: underline;
+}
